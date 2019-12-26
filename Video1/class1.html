@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+
+    <title>标题啊标题</title>
+
+    <style>
+        /*首先使用样式重置 避免不同浏览器之间的兼容性问题*/
+        * {
+            /* *是通配符 选择所有元素 */
+            margin: 0;
+            padding: 0;
+        }
+        /* margin 和 pedding 之间的关系 框
+
+
+    /*把水平菜单当作是开头带小圆点的无序列表进行处理*/
+        ul {
+            list-style: none;
+            /*使用list-style来控制小圆点的格式*/
+        }
+
+        a {
+            text-decoration: none;
+            /*去掉文字下划线*/
+        }
+
+        #menu {
+            /* id选择器 */
+            overflow: hidden;
+            /*解决塌陷问题的两种方法：写死 或者 目前使用的这种方法(IE6不兼容)*/
+            /*height: 30px*/
+        }
+
+        #menu li {
+            /*使用后代选择器 选择id为menu的子元素*/
+            width: 120px;
+            height: 30px;
+            /* 宽和高 单位为像素 */
+            background: #cccccc;
+            /* 设置背景颜色 */
+            float: left;
+            /* 左浮动 注意空间释放 塌陷问题 */
+            margin-right: 5px;
+            /* 利用margin 两块中间能留空 */
+            text-align: center;
+            /* 文本左右居中 */
+            line-height: 30px;
+            /* 取巧 让文本上下居中 */
+        }
+
+        #menu a {
+            display: block;
+            /* 变成块元素 使得整体都能被选中 */
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+        <ul id="menu">
+            <li>
+                <a href="#">link 1</a>
+            </li>
+            <li>
+                <a href="#">link 2</a>
+            </li>
+            <li>
+                <a href="#">link 3</a>
+            </li>
+        </ul>
+</body>
+</html>
